@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>cloud.difference</groupId>
 	<artifactId>difference-nbi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>nbi</name>
-	<description>Demo project for Spring Boot</description>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>difference-nbi</name>
+	<description>difference-nbi project</description>
 
 
 	<properties>
