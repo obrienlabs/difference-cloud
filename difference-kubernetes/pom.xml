@@ -2,14 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cloud.difference</groupId>
+		<artifactId>difference-root</artifactId>
+		<version>0.0.2-SNAPSHOT</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
 	<groupId>cloud.difference</groupId>
-	<artifactId>difference-root</artifactId>
+	<artifactId>difference-kubernetes</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
-	<name>difference</name>
-	<description>difference-cloud project</description>
-    <packaging>pom</packaging>
-    <modules>
-  	  <module>difference-nbi</module>
-      <module>difference-kubernetes</module>
-    </modules>
+	<name>difference-kubernetes</name>
+	<description>difference-kubernetes project</description>
 </project>
