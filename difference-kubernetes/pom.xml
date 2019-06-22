@@ -6,7 +6,6 @@
 		<groupId>cloud.difference</groupId>
 		<artifactId>difference-root</artifactId>
 		<version>0.0.2-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cloud.difference</groupId>
 	<artifactId>difference-kubernetes</artifactId>
