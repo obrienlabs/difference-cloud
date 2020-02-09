@@ -17,10 +17,21 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
         <jackson-2-version>2.9.8</jackson-2-version>
+        <aws-secrets-manager-version>1.11.339</aws-secrets-manager-version>
+        <jersey.version>2.27</jersey.version>
 	</properties>
 
 	<dependencies>
+		<!-- AWS -->
+		<dependency>
+      		<groupId>com.amazonaws</groupId>
+      		<artifactId>aws-java-sdk-secretsmanager</artifactId>
+      		<version>${aws-secrets-manager-version}</version>
+    	</dependency>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<!--artifactId>spring-boot-starter-data-jpa</artifactId-->
@@ -44,8 +55,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-		
-		            <!-- https://jersey.java.net/documentation/latest/modules-and-dependencies.html -->
+	 <!-- https://jersey.java.net/documentation/latest/modules-and-dependencies.html -->
     <dependency>
         <groupId>javax.ws.rs</groupId>
         <artifactId>javax.ws.rs-api</artifactId>
@@ -54,29 +64,25 @@
     <dependency>
         <groupId>org.glassfish.jersey.containers</groupId>
         <artifactId>jersey-container-servlet</artifactId>
-        <version>2.27</version>
+        <!--  version>2.27</version-->
     </dependency>
     <dependency>
         <groupId>org.glassfish.jersey.core</groupId>
         <artifactId>jersey-server</artifactId>
-        <version>2.27</version>
-    </dependency>
+        </dependency>
     <dependency>
         <groupId>org.glassfish.jersey.core</groupId>
         <artifactId>jersey-client</artifactId>
-        <version>2.27</version>
-    </dependency>
+        </dependency>
     <dependency>
         <groupId>org.glassfish.jersey.media</groupId>
         <artifactId>jersey-media-multipart</artifactId>
-        <version>2.27</version>
-    </dependency>
+        </dependency>
     <!-- fixes http://stackoverflow.com/questions/23442440/messagebodyreader-not-found-for-media-type-application-json -->
     <dependency>
         <groupId>org.glassfish.jersey.media</groupId>
         <artifactId>jersey-media-json-jackson</artifactId>
-        <version>2.27</version>
-    </dependency>
+        </dependency>
     <!-- for spring injection in rest -->
     <dependency>
         <groupId>org.glassfish.jersey.ext</groupId>
@@ -108,42 +114,36 @@
  <dependency>
    <groupId>com.fasterxml.jackson.core</groupId>
    <artifactId>jackson-core</artifactId>
-   <version>${jackson-2-version}</version>
- </dependency>
+   </dependency>
 
  <!-- Just the annotations; use this dependency if you want to attach annotations
       to classes without connecting them to the code. -->
  <dependency>
    <groupId>com.fasterxml.jackson.core</groupId>
    <artifactId>jackson-annotations</artifactId>
-   <version>${jackson-2-version}</version>
-</dependency>
+   </dependency>
 
 <!-- databinding; ObjectMapper, JsonNode and related classes are here -->
 <dependency>
   <groupId>com.fasterxml.jackson.core</groupId>
   <artifactId>jackson-databind</artifactId>
-  <version>${jackson-2-version}</version>
-</dependency>
+  </dependency>
 
 <!-- smile (binary JSON). Other artifacts in this group do other formats. -->
 <dependency>
   <groupId>com.fasterxml.jackson.dataformat</groupId>
   <artifactId>jackson-dataformat-smile</artifactId>
-  <version>${jackson-2-version}</version>
-</dependency>
+  </dependency>
 <!-- JAX-RS provider -->
 <dependency>
    <groupId>com.fasterxml.jackson.jaxrs</groupId>
    <artifactId>jackson-jaxrs-json-provider</artifactId>
-   <version>${jackson-2-version}</version>
-</dependency>
+   </dependency>
 <!-- Support for JAX-B annotations as additional configuration -->
 <dependency>
   <groupId>com.fasterxml.jackson.module</groupId>
   <artifactId>jackson-module-jaxb-annotations</artifactId>
-  <version>${jackson-2-version}</version>
-</dependency>
+  </dependency>
     <dependency>
         <groupId>com.owlike</groupId>
         <artifactId>genson</artifactId>

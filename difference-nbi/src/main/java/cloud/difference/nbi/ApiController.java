@@ -20,11 +20,14 @@ public class ApiController {
     @RequestMapping(method=RequestMethod.GET)
     public @ResponseBody Api process(@RequestParam(value="action", required=true, defaultValue="undefined") String action) {
     	String message = "pass";
+    	System.out.println(this.getClass().getCanonicalName());
     	// external call
     	//message = externalAPICall(action);
     	Api api = new Api(counter.incrementAndGet(), message);
     	return api;
     } 
+    
+    
     
 /*    private String externalAPICall(String action) {
     	String content = null;
