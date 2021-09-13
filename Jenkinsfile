@@ -1,8 +1,8 @@
 pipeline {
-    //agent any
-    agent {
+    agent any
+    /*agent {
         label 'maven'
-    }
+    }*/
 
     options {
         disableConcurrentBuilds() 
