@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven 3.4'
+        jdk 'jdk8'
+    }
+
     /*agent {
         label 'maven'
     }*/
